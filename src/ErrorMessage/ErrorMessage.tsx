@@ -1,5 +1,5 @@
 const ErrorMessage = ({ message = 'Something went wrong' }) => {
-  <div>{message}</div>;
+  return <div data-testid="message-container">{message}</div>;
 };
 
 export default ErrorMessage;
