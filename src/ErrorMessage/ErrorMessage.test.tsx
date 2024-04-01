@@ -8,4 +8,9 @@ describe('ErrorMessage', () => {
     expect(screen.getByTestId('message-container')).toHaveTextContent('Something went wrong');
     screen.debug();
   });
+
+  it('renders custom error state', () => {
+    render(<ErrorMessage message="Email is already taken" />);
+    expect(screen.getByTestId('message-container')).toHaveTextContent('Email is already taken');
+  });
 });
